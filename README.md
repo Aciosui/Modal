@@ -1,1 +1,3 @@
-This is the code example of how to constrains focus on modal dialog including VoiceOver 
+Steps of creating Accessible Modal dialog
+.isModal - Cause screen reader make an announcement as dialog 
+
