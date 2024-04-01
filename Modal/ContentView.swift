@@ -26,15 +26,20 @@ struct ContentView: View {
                     Text("Show Modal")
                         .accessibilityFocused($isTriggerButtonFocused)
                 }
+                .padding(50)
+                
                 if(showModal){
                     VStack{
+                        
                         Text("Modal dialog Title")
+                            .foregroundColor(.green)
                             .font(.title)
                             .padding(.top)
                             .accessibilityAddTraits(.isHeader)
                             .accessibilityFocused($isTitleFocused)
                         Text("Focus Management is a crucial part of accessibility in dialog for screen reader and keyboard only user.")
                             .padding(25)
+                            .foregroundColor(.green)
                         Button("Close", action: {
                             showModal.toggle()
                             isTriggerButtonFocused = true
@@ -44,8 +49,14 @@ struct ContentView: View {
                         .accessibilityAction(.escape) {
                             showModal.toggle()
                             isTriggerButtonFocused = true
+                            
                         }
+                        .padding()
+                        .background(Color.white)
+                        .shadow(radius: 10)
+
                 }
+                
                
             }
     
